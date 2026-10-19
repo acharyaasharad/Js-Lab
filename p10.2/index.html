@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        margin: 0;
+        padding: 24px;
+        color: #1f2937;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      input {
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+      .actions {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 12px;
+        justify-content: flex-start;
+        margin-top: 8px;
+      }
+      button {
+        border: none;
+        background: #2563eb;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.98rem;
+      }
+      button.secondary {
+        background: #10b981;
+      }
+      button:hover {
+        opacity: 0.95;
+      }
+      .json-output {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 12px;
+        margin: 18px 0;
+        white-space: pre-wrap;
+        font-family: "Courier New", monospace;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #d1d5db;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Details</h1>
+
+      <form id="employeeForm">
+        <div class="field">
+          <label for="employeeId">Employee ID</label>
+          <input type="text" id="employeeId" name="employeeId" required />
+        </div>
+
+        <div class="field">
+          <label for="employeeName">Employee Name</label>
+          <input type="text" id="employeeName" name="employeeName" required />
+        </div>
+
+        <div class="field">
+          <label for="department">Department</label>
+          <input type="text" id="department" name="department" required />
+        </div>
+
+        <div class="field">
+          <label for="salary">Salary</label>
+          <input type="number" id="salary" name="salary" required min="0" />
+        </div>
+
+        <div class="actions">
+          <button type="submit">Add Employee</button>
+          <button type="button" id="loadEmployees" class="secondary">Load Employees</button>
+        </div>
+      </form>
+
+      <div id="jsonOutput" class="json-output">JSON output will appear here.</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTableBody"></tbody>
+      </table>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 0.9rem;">
+      J Sharadvardhan Acharya 24070521027
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

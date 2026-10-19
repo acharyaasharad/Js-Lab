@@ -1,0 +1,26 @@
+[
+    {
+        "orderId": "ORD001",
+        "customerName": "Alice Smith",
+        "foodItem": "Margherita Pizza",
+        "quantity": 2,
+        "totalAmount": 24.50,
+        "orderStatus": "Ready"
+    },
+    {
+        "orderId": "ORD002",
+        "customerName": "Bob Johnson",
+        "foodItem": "Cheeseburger",
+        "quantity": 1,
+        "totalAmount": 12.00,
+        "orderStatus": "Preparing"
+    },
+    {
+        "orderId": "ORD003",
+        "customerName": "Charlie Brown",
+        "foodItem": "Caesar Salad",
+        "quantity": 3,
+        "totalAmount": 27.00,
+        "orderStatus": "Delivered"
+    }
+]

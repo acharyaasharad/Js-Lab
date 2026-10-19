@@ -147,6 +147,7 @@ requiredFields.forEach((name) => {
 
   field.addEventListener('blur', () => validateField(name));
   field.addEventListener('input', () => clearInvalid(field));
+  field.addEventListener('focus', () => clearInvalid(field));
 });
 
 ['day', 'month', 'year'].forEach((id) => {

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Conference Schedule Manager</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --blue: #286b99;
+      --page: #edf4f9;
+      --text: #30343a;
+      --card: #ffffff;
+      --line: #d7e0e8;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #eaf4fb, #ffffff);
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 125px 20px 45px;
+    }
+
+    .student-info {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 8px 18px;
+      background: rgba(255, 255, 255, 0.7);
+      color: #2d4355;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      font-size: 14px;
+      line-height: 1.4;
+      z-index: 10;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .student-info .divider {
+      opacity: 0.7;
+    }
+
+    .student-name {
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #28638e;
+      font-size: 27px;
+    }
+
+    .top select {
+      width: 90px;
+      height: 37px;
+      padding: 0 10px;
+      border: 1px solid #bfd0dc;
+      border-radius: 7px;
+      background: white;
+      font-size: 14px;
+    }
+
+    .card {
+      padding: 27px;
+      background: var(--card);
+      border: 1px solid #d8e5ee;
+      border-radius: 15px;
+      box-shadow: 0 7px 22px rgba(43, 72, 97, 0.12);
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #28638e;
+      font-size: 21px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 14px;
+    }
+
+    th {
+      padding: 14px 13px;
+      background: var(--blue);
+      color: white;
+      text-align: left;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+
+    th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+
+    td {
+      padding: 13px;
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    tr:nth-child(even) td {
+      background: #f5f9fc;
+    }
+
+    td.time {
+      background: #e9f3fa;
+      color: #315d7b;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) td.time {
+      background: #e3eff7;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 18px;
+      font-size: 12px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .completed {
+      background: #d9efdf;
+      color: #36714a;
+    }
+
+    .progress {
+      background: #dceefa;
+      color: #39709b;
+    }
+
+    .pending {
+      background: #fff0c7;
+      color: #866d1d;
+    }
+
+    .delete {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #e64c45;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .delete:hover {
+      background: #c93832;
+      transform: translateY(-1px);
+    }
+
+    .add-session {
+      margin-top: 20px;
+      padding: 11px 21px;
+      border: none;
+      border-radius: 7px;
+      background: var(--blue);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .add-session:hover {
+      background: #1e557d;
+    }
+
+    .form {
+      display: none;
+      gap: 10px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .form.show {
+      display: flex;
+    }
+
+    .form input,
+    .form select {
+      height: 39px;
+      padding: 0 12px;
+      border: 1px solid #cbd8e2;
+      border-radius: 7px;
+      background: #f6f9fb;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form input:focus,
+    .form select:focus {
+      border-color: #2685c5;
+      box-shadow: 0 0 0 3px rgba(38, 133, 197, 0.12);
+    }
+
+    .form input.time-input {
+      width: 120px;
+    }
+
+    .form input {
+      min-width: 120px;
+      flex: 1;
+    }
+
+    .form select {
+      width: 135px;
+    }
+
+    .add {
+      height: 39px;
+      padding: 0 18px;
+      border: none;
+      border-radius: 7px;
+      background: #28a864;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .add:hover {
+      background: #218b52;
+    }
+
+    body.dark {
+      --page: #20262c;
+      --card: #2b3239;
+      --text: #e8edf1;
+      --line: #46515a;
+      --blue: #315f82;
+      background: var(--page);
+    }
+
+    body.dark .card {
+      border-color: #46545f;
+      box-shadow: 0 7px 24px rgba(0, 0, 0, 0.38);
+    }
+
+    body.dark td,
+    body.dark tr:nth-child(even) td {
+      background: #30383f;
+    }
+
+    body.dark td.time,
+    body.dark tr:nth-child(even) td.time {
+      background: #293944;
+    }
+
+    body.dark .top select,
+    body.dark .form input,
+    body.dark .form select {
+      background: #30383f;
+      color: #eeeeee;
+      border-color: #53616c;
+    }
+
+    body.dark h1,
+    body.dark h2 {
+      color: #78add0;
+    }
+
+    body.dark .student-info {
+      background: #2b3239;
+      color: #9ed0f7;
+      border-left-color: #65b2f1;
+    }
+
+    body.dark .student-info strong {
+      color: #ffffff;
+    }
+
+    body.blue {
+      --page: #e9f4fc;
+      background: var(--page);
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        padding: 125px 15px 30px;
+      }
+
+      .card {
+        padding: 19px;
+      }
+
+      .form {
+        flex-wrap: wrap;
+      }
+
+      .form input,
+      .form select,
+      .form input.time-input {
+        width: 100%;
+        flex: 1;
+      }
+
+      .add {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .student-info {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        min-width: auto;
+        text-align: center;
+      }
+
+      .top {
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="student-info">
+    <div class="student-name">SHARADVARDHAN ACHARYA</div>
+    <div class="divider">|</div>
+    <div><strong>PRN:</strong> 24070521027</div>
+  </section>
+
+  <div class="page">
+    <div class="top">
+      <h1>Conference Schedule Manager</h1>
+
+      <select id="pageTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="blue">Blue</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h2>Event Timetable</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>SESSION / TOPIC</th>
+              <th>SPEAKER</th>
+              <th>ROOM</th>
+              <th>STATUS</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+
+          <tbody id="rows">
+            <tr>
+              <td class="time">08:45 - 09:15</td>
+              <td>Guest Arrival and Check-in</td>
+              <td>Event Coordination Team</td>
+              <td>Reception Area</td>
+              <td><span class="status completed">completed</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">09:15 - 09:45</td>
+              <td>Opening Ceremony</td>
+              <td>Dr. Neha Kulkarni</td>
+              <td>Auditorium</td>
+              <td><span class="status completed">completed</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">09:45 - 11:00</td>
+              <td>Machine Learning for Smart Cities</td>
+              <td>Prof. Arjun Deshmukh</td>
+              <td>Auditorium</td>
+              <td><span class="status progress">in progress</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">11:00 - 11:30</td>
+              <td>Refreshment Break</td>
+              <td>—</td>
+              <td>Common Lounge</td>
+              <td><span class="status pending">pending</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">11:30 - 12:45</td>
+              <td>Modern Web Development Trends</td>
+              <td>Ms. Kavya Nair</td>
+              <td>Seminar Room 1</td>
+              <td><span class="status pending">pending</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">12:45 - 13:45</td>
+              <td>Networking Lunch</td>
+              <td>—</td>
+              <td>Dining Hall</td>
+              <td><span class="status pending">pending</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">13:45 - 15:15</td>
+              <td>Cybersecurity and Data Protection</td>
+              <td>Mr. Rohan Bhide</td>
+              <td>Seminar Room 1</td>
+              <td><span class="status pending">pending</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="time">15:15 - 16:00</td>
+              <td>Interactive Discussion and Closing Remarks</td>
+              <td>Expert Panel</td>
+              <td>Auditorium</td>
+              <td><span class="status pending">pending</span></td>
+              <td><button class="delete" onclick="removeRow(this)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="add-session" onclick="toggleForm()">
+        + Add Session
+      </button>
+
+      <div class="form" id="form">
+        <input class="time-input" id="time" placeholder="--:-- - --:--">
+        <input id="topic" placeholder="Session topic">
+        <input id="speaker" placeholder="Speaker">
+        <input id="room" placeholder="Room">
+
+        <select id="status">
+          <option value="pending">Pending</option>
+          <option value="progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+
+        <button class="add" onclick="addSession()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

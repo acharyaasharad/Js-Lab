@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="form-card" aria-labelledby="form-title">
+      <h1 id="form-title">Gym Admission Form</h1>
+
+      <form id="registration-form">
+        <div class="field-group">
+          <label for="full-name">Full Name</label>
+          <input id="full-name" name="fullName" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="field-group">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="13" max="100" required />
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="field-group">
+          <label for="mobile">Mobile Number</label>
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="[0-9]{10}" autocomplete="tel" required />
+        </div>
+
+        <div class="field-group">
+          <label for="plan">Membership Plan</label>
+          <select id="plan" name="plan" required>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="success-message" class="success-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <span>Sharadvardhan Acharya</span>
+    <span class="footer-divider" aria-hidden="true">|</span>
+    <span>PRN: 24070521027</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

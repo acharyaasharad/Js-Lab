@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Orders</title>
+    
+    <!-- 1. Use the jQuery library through a CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1e293b;
+        }
+        button {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #2563eb;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+        }
+        .summary {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .error {
+            color: #dc2626;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Restaurant Orders</h1>
+        
+        <button id="viewOrdersBtn">View Orders</button>
+        <div id="message" class="error"></div>
+        
+        <table id="ordersTable">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Food Item</th>
+                    <th>Quantity</th>
+                    <th>Total Amount</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 3. Display the orders dynamically here -->
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <!-- 6. Display the total number of orders below the table -->
+            <p>Total Number of Orders: <span id="totalOrders">0</span></p>
+            <!-- 7. Calculate and display the total sales amount of all orders -->
+            <p>Total Sales Amount: $<span id="totalSales">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

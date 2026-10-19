@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Rahul", "department": "CSE", "marks": 88 },
+  { "id": 2, "name": "Sahil", "department": "AeroSpace", "marks": 99 },
+  { "id": 3, "name": "Hardik", "department": "Biology", "marks": 81 }
+]

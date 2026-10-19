@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Information Form</title>
+    <style>
+      :root {
+        --bg: #e9e5df;
+        --panel: #f2f0ed;
+        --panel-2: #dfeaf0;
+        --card: #f4f1ee;
+        --dark: #1d2c38;
+        --muted: #5a6977;
+        --line: #c9c2b7;
+        --green: #d4ea42;
+        --green-deep: #c6e42a;
+        --green-soft: #dff69d;
+        --shadow: rgba(29, 44, 56, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: var(--dark);
+      }
+
+      .page {
+        width: min(1100px, calc(100% - 48px));
+        margin: 28px auto 32px;
+      }
+
+      .single-panel {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .data-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 22px;
+      }
+
+      .data-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: rgba(21, 31, 39, 0.8);
+        margin-left: 2px;
+      }
+
+      .value-box,
+      .value-box select,
+      .value-box input {
+        background: #dfeaf0;
+        border: 1px solid #d5dfe7;
+        border-radius: 12px;
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 18px;
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        font-weight: 700;
+        color: #1b2c38;
+        text-align: center;
+        width: 100%;
+        font-family: inherit;
+      }
+
+      .value-box select,
+      .value-box input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+      }
+
+      .value-box.select {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .value-box.select select {
+        border: none;
+        background: transparent;
+        width: 100%;
+        min-height: 68px;
+        padding-right: 42px;
+        text-align: center;
+      }
+
+      .value-box.select::after {
+        content: "⌄";
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.4rem;
+        pointer-events: none;
+      }
+
+      .value-box input {
+        border: none;
+        background: transparent;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 0.7rem;
+        letter-spacing: 0.12rem;
+        color: rgba(18, 31, 39, 0.7);
+        margin-top: 28px;
+        text-transform: uppercase;
+      }
+
+      .submit-button {
+        display: block;
+        margin: 28px auto 0;
+        padding: 14px 34px;
+        border: 1px solid var(--dark);
+        border-radius: 12px;
+        background: var(--green);
+        color: var(--dark);
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        background: var(--green-deep);
+      }
+
+      @media (max-width: 700px) {
+        .data-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="single-panel">
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="label">Full name</div>
+            <div class="value-box"><input type="text" value="Sharadvardhan Acharya" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Age</div>
+            <div class="value-box"><input type="number" value="19" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Height (cm)</div>
+            <div class="value-box"><input type="number" value="169" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Current weight (kg)</div>
+            <div class="value-box"><input type="number" value="49" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Fitness goal</div>
+            <div class="value-box select">
+              <select>
+                <option>Gain muscle</option>
+                <option>Lose weight</option>
+                <option>Build strength</option>
+                <option>Improve endurance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Experience</div>
+            <div class="value-box select">
+              <select>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Diet preference</div>
+            <div class="value-box select">
+              <select>
+                <option>Lactose-free</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+                <option>High-protein</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Workout location</div>
+            <div class="value-box select">
+              <select>
+                <option>Home and gym</option>
+                <option>Home only</option>
+                <option>Gym only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Daily calorie goal</div>
+            <div class="value-box"><input type="number" value="2500" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Daily protein goal (g)</div>
+            <div class="value-box"><input type="number" value="70" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Daily step goal</div>
+            <div class="value-box"><input type="number" value="6000" /></div>
+          </div>
+
+          <div class="data-item">
+            <div class="label">Daily water goal (ml)</div>
+            <div class="value-box"><input type="number" value="2500" /></div>
+          </div>
+        </div>
+
+        <button class="submit-button" type="submit">Submit</button>
+
+        <div class="footer">Sharadvardhan Acharya &nbsp; | &nbsp; PRN: 24070521027</div>
+      </div>
+    </div>
+  </body>
+</html>

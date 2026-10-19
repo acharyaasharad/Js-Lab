@@ -1,0 +1,38 @@
+[
+  {
+    "employeeId": "E101",
+    "employeeName": "J Sharadvardhan Acharya",
+    "department": "Engineering",
+    "salary": 75000
+  },
+  {
+    "employeeId": "E102",
+    "employeeName": "ojas jibhkate",
+    "department": "Finance",
+    "salary": 68000
+  },
+  {
+    "employeeId": "E103",
+    "employeeName": "himesh bhure",
+    "department": "Management",
+    "salary": 62000
+  },
+  {
+    "employeeId": "E104",
+    "employeeName": "Ayush bisen ",
+    "department": "Cleaning ",
+    "salary": 2000
+  },
+  {
+    "employeeId": "E105",
+    "employeeName": "Ayush aswale ",
+    "department": "Marketing ",
+    "salary": 35000
+  },
+  {
+    "employeeId": "E106 ",
+    "employeeName": "vhtyffvg",
+    "department": "vfuvghj",
+    "salary": 10000
+  }
+]

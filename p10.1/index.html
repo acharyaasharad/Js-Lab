@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #ececec;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        padding: 18px 22px 0 22px;
+      }
+
+      h2 {
+        margin: 0 0 20px 0;
+        font-size: 27px;
+        font-weight: 700;
+        color: #000;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+
+      input {
+        padding: 8px 10px;
+        border: 1px solid #8d8d8d;
+        border-radius: 4px;
+        font-size: 14px;
+        min-width: 140px;
+      }
+
+      .btn {
+        background: #f3f3f3;
+        border: 1px solid #8d8d8d;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+        font-size: 16px;
+      }
+
+      th {
+        background: #d9d9d9;
+        font-weight: 700;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Student Details</h2>
+
+      <div class="form-row">
+        <input type="number" id="studentId" placeholder="ID" />
+        <input type="text" id="studentName" placeholder="Name" />
+        <input type="text" id="studentDepartment" placeholder="Department" />
+        <input type="number" id="studentMarks" placeholder="Marks" />
+        <button class="btn" id="addStudentBtn">Add Student</button>
+      </div>
+
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Marks</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script>
+      const students = [];
+      const addStudentBtn = document.getElementById("addStudentBtn");
+
+      function renderTable() {
+        const tableBody = document.querySelector("#studentTable tbody");
+        tableBody.innerHTML = "";
+
+        if (students.length === 0) {
+          tableBody.innerHTML =
+            '<tr><td colspan="4">No student data entered yet.</td></tr>';
+          return;
+        }
+
+        students.forEach((student) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${student.id}</td>
+            <td>${student.name}</td>
+            <td>${student.department}</td>
+            <td>${student.marks}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      addStudentBtn.addEventListener("click", () => {
+        const id = document.getElementById("studentId").value.trim();
+        const name = document.getElementById("studentName").value.trim();
+        const department = document.getElementById("studentDepartment").value.trim();
+        const marks = document.getElementById("studentMarks").value.trim();
+
+        if (!id || !name || !department || !marks) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        students.push({
+          id: Number(id),
+          name,
+          department,
+          marks: Number(marks),
+        });
+
+        document.getElementById("studentId").value = "";
+        document.getElementById("studentName").value = "";
+        document.getElementById("studentDepartment").value = "";
+        document.getElementById("studentMarks").value = "";
+
+        renderTable();
+      });
+
+      renderTable();
+    </script>
+  </body>
+</html>
