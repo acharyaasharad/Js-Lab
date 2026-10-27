@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal student e-portfolio of J Sharadvardhan Acharya, a Computer Science and Engineering undergraduate student at Symbiosis Institute of Technology (SIT), Nagpur.">
+  <meta name="author" content="J Sharadvardhan Acharya">
+  <title>J Sharadvardhan Acharya | CSE Student Portfolio</title>
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Status Notice -->
+  <div class="top-status-bar" role="complementary" aria-label="Academic notice">
+    <div class="status-inner">
+      <span class="status-pulse-dot" aria-hidden="true"></span>
+      <span>B.Tech CSE Undergraduate @ Symbiosis Institute of Technology, Nagpur &bull; Open to 2026 Projects & Internships</span>
+      <a href="#contact" class="status-cta-link">Connect &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="J Sharadvardhan Acharya Portfolio Home">
+        <span class="brand-icon">JA</span>
+        <span class="brand-text">J Sharadvardhan Acharya</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu (Rearranged order) -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Theme Switcher & Mobile Toggle -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch between light blue and dark theme" title="Switch to Dark Theme">
+          <span class="theme-toggle-icon" id="theme-toggle-icon">🌙</span>
+          <span class="theme-toggle-text" id="theme-toggle-text">Dark Theme</span>
+        </button>
+
+        <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🎓</span>
+            <span>Symbiosis Institute of Technology, Nagpur &bull; CSE</span>
+          </div>
+
+          <h1 class="hero-title">Hi, I'm J Sharadvardhan Acharya</h1>
+
+          <div class="hero-role">Computer Science and Engineering Student</div>
+          <div class="hero-college">Symbiosis Institute of Technology, Nagpur</div>
+
+          <p class="hero-description">
+            I'm a CSE student interested in software development, web technologies, Python, and machine learning. I enjoy building practical projects that help me learn programming and solve real-world problems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <svg viewBox="0 0 24 24" class="btn-arrow-icon" aria-hidden="true"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+
+          <!-- Verified Real Social Profiles Row -->
+          <div class="hero-social-row">
+            <!-- Verified GitHub -->
+            <a href="https://github.com/acharyaasharad" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="GitHub: acharyaasharad">
+              <svg viewBox="0 0 24 24" class="social-svg-icon" aria-hidden="true">
+                <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+              </svg>
+              <span>github.com/acharyaasharad</span>
+            </a>
+
+            <!-- Verified LinkedIn -->
+            <a href="https://www.linkedin.com/in/j-sharadvardhan-acharya-83638b3b5/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="LinkedIn: J Sharadvardhan Acharya">
+              <svg viewBox="0 0 24 24" class="social-svg-icon" aria-hidden="true">
+                <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.67-.75 1.67-1.67A1.67 1.67 0 0 0 6.46 5.42a1.67 1.67 0 0 0-1.67 1.67c0 .92.75 1.67 1.67 1.67m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+              </svg>
+              <span>LinkedIn Profile</span>
+            </a>
+
+            <!-- Direct Email -->
+            <a href="mailto:sharad.acharya@example.com" class="social-pill-btn" title="Email J Sharadvardhan Acharya">
+              <svg viewBox="0 0 24 24" class="social-svg-icon" aria-hidden="true">
+                <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span>sharad.acharya@example.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Student Showcase Card -->
+        <div class="hero-profile-card">
+          <div class="profile-avatar-frame">
+            <img src="assets/profile.jpg" alt="Photograph of J Sharadvardhan Acharya" class="hero-avatar">
+          </div>
+
+          <div class="profile-card-body">
+            <div class="student-status-chip">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span>CSE Undergraduate Student</span>
+            </div>
+
+            <div class="quick-facts-grid">
+              <div class="quick-fact-item">
+                <span class="fact-num">7</span>
+                <span class="fact-lbl">Projects</span>
+              </div>
+              <div class="quick-fact-item">
+                <span class="fact-num">SIT</span>
+                <span class="fact-lbl">Nagpur</span>
+              </div>
+              <div class="quick-fact-item">
+                <span class="fact-num">Trainee</span>
+                <span class="fact-lbl">Avantique</span>
+              </div>
+            </div>
+
+            <div class="profile-tech-preview">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">C</span>
+              <span class="tech-chip">HTML/CSS</span>
+              <span class="tech-chip">Firebase</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Projects Showcase Section (Rearranged to Section 2 for maximum impact!) -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Engineering Showcase</span>
+          <h2 class="section-title">Projects & Software Concepts</h2>
+          <p class="section-subtitle">Explore interactive prototypes, machine learning models, and web applications loaded dynamically from projects.json.</p>
+        </div>
+
+        <!-- Interactive Search & Filter Toolbar -->
+        <div class="projects-toolbar-card">
+          <div class="search-bar-wrapper">
+            <svg viewBox="0 0 24 24" class="search-svg-icon" aria-hidden="true">
+              <path fill="currentColor" d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/>
+            </svg>
+            <input type="text" id="project-search-input" class="search-field" placeholder="Search by name, technology (Python, Firebase, Flask, Random Forest...), or keywords..." autocomplete="off">
+            <button type="button" id="clear-search-btn" class="clear-search-btn" title="Clear search" style="display: none;">&times;</button>
+          </div>
+
+          <!-- Category Filter Buttons with Project Counts -->
+          <div class="projects-filter-bar" role="tablist" aria-label="Project category filter">
+            <button type="button" class="filter-btn active" data-category="All" role="tab" aria-selected="true">
+              All <span class="filter-count-badge" data-category-count="All">7</span>
+            </button>
+            <button type="button" class="filter-btn" data-category="Web Development" role="tab" aria-selected="false">
+              Web Development <span class="filter-count-badge" data-category-count="Web Development">2</span>
+            </button>
+            <button type="button" class="filter-btn" data-category="Machine Learning" role="tab" aria-selected="false">
+              Machine Learning <span class="filter-count-badge" data-category-count="Machine Learning">2</span>
+            </button>
+            <button type="button" class="filter-btn" data-category="Python and AI" role="tab" aria-selected="false">
+              Python & AI <span class="filter-count-badge" data-category-count="Python and AI">2</span>
+            </button>
+            <button type="button" class="filter-btn" data-category="Simulation" role="tab" aria-selected="false">
+              Simulation <span class="filter-count-badge" data-category-count="Simulation">1</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Status Counter -->
+        <div class="projects-status-message" id="projects-status">Loading projects...</div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="projects-grid" id="projects-grid" aria-live="polite">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical Skills Matrix</h2>
+          <p class="section-subtitle">A developing set of technologies explored through coursework, lab assignments, and personal practice.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">💻</span>
+              <h3 class="skill-card-title">Programming</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">🌐</span>
+              <h3 class="skill-card-title">Web Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Flask</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">🗄️</span>
+              <h3 class="skill-card-title">Databases</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Firestore</span>
+            </div>
+          </div>
+
+          <!-- Tools and Platforms -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">🛠️</span>
+              <h3 class="skill-card-title">Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Visual Studio Code</span>
+            </div>
+          </div>
+
+          <!-- Machine Learning and Data -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">📊</span>
+              <h3 class="skill-card-title">Machine Learning & Data</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="skills-disclaimer">
+          * Represented as active learning and project-oriented competencies rather than claims of commercial expertise.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. About Me Section -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Background & Goals</span>
+          <h2 class="section-title">About J Sharadvardhan Acharya</h2>
+          <p class="section-subtitle">Developing strong foundations in software engineering, practical development, and problem solving.</p>
+        </div>
+
+        <!-- Student Introduction -->
+        <div class="about-intro-text">
+          <p>
+            My name is <strong>J Sharadvardhan Acharya</strong>, and I am pursuing Computer Science and Engineering at <strong>Symbiosis Institute of Technology, Nagpur</strong>. I am developing my skills in programming, web development, databases, and machine learning. Through college assignments, practicals, and personal projects, I am learning how to turn ideas into working applications. My goal is to improve my problem-solving abilities and become a capable software developer.
+          </p>
+        </div>
+
+        <!-- Information Cards -->
+        <div class="info-cards-grid">
+          <div class="info-card">
+            <div class="info-card-header">
+              <span class="info-card-icon">📘</span>
+              <h3 class="info-card-title">Education</h3>
+            </div>
+            <p class="info-card-value">Computer Science and Engineering</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-header">
+              <span class="info-card-icon">🏛️</span>
+              <h3 class="info-card-title">Institute</h3>
+            </div>
+            <p class="info-card-value">Symbiosis Institute of Technology, Nagpur</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-header">
+              <span class="info-card-icon">💡</span>
+              <h3 class="info-card-title">Interests</h3>
+            </div>
+            <p class="info-card-value">Web Development, Python, Machine Learning</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-header">
+              <span class="info-card-icon">🎯</span>
+              <h3 class="info-card-title">Current Focus</h3>
+            </div>
+            <p class="info-card-value">Learning and building practical software projects</p>
+          </div>
+        </div>
+
+        <!-- Education Box -->
+        <div class="education-box">
+          <div class="education-box-header">
+            <h3 class="education-institute">Symbiosis Institute of Technology, Nagpur</h3>
+            <span class="education-status-badge">Undergraduate Student</span>
+          </div>
+          <p class="education-degree">Degree: Bachelor of Technology in Computer Science and Engineering</p>
+          <p class="education-note">
+            Focusing on core computer science subjects, programming labs, database practicals, and engineering mathematics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Experience and Learning Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Learning Journey</span>
+          <h2 class="section-title">Experience & Practical Learning</h2>
+          <p class="section-subtitle">Hands-on student training and coursework practical experience.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Trainee Program -->
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Trainee Program</h3>
+              <span class="timeline-tag">Training Experience</span>
+            </div>
+            <div class="timeline-org">Avantique Business Services</div>
+            <p class="timeline-desc">
+              Participated in a trainee program involving exposure to project delivery processes, dashboards, and project operations.
+            </p>
+            <div class="timeline-note">
+              <strong>Context:</strong> This program served as a valuable learning experience to understand business processes, team reporting workflows, and operational dashboards.
+            </div>
+          </div>
+
+          <!-- Academic & Practical Projects -->
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">College Projects & Practical Learning</h3>
+              <span class="timeline-tag">Academic Coursework</span>
+            </div>
+            <div class="timeline-org">Symbiosis Institute of Technology, Nagpur</div>
+            <p class="timeline-desc">
+              Worked on academic and personal projects involving web development, Python programming, databases, machine learning, and software development concepts.
+            </p>
+            <div class="timeline-note">
+              <strong>Context:</strong> Includes lab practicals, semester mini-projects, collaborative coding exercises, and self-guided learning in web development and data analysis.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Initiate Communication</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Interested in discussing software projects, academic collaborations, or opportunities? Connect with me directly below.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Validated Contact Form Card -->
+          <div class="contact-form-card">
+            <h3 class="contact-card-heading">Send a Message</h3>
+            <p class="contact-card-sub">Fill out the fields below to send a note.</p>
+
+            <!-- Submission Alert Notice -->
+            <div class="form-status-alert" id="form-status-alert" role="alert"></div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  Your Name <span class="form-required">*</span>
+                </label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Sharma" required>
+                <div class="form-error-msg" id="error-name">Please enter your name (minimum 2 characters).</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  Email Address <span class="form-required">*</span>
+                </label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. alex@example.com" required>
+                <div class="form-error-msg" id="error-email">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  Message <span class="form-required">*</span>
+                </label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Write your message or inquiry here..." required></textarea>
+                <div class="form-error-msg" id="error-message">Please enter a message (minimum 10 characters).</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" class="btn-svg-icon" aria-hidden="true"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Verified Direct Profiles Card -->
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Verified Profiles & Channels</h3>
+            <p class="contact-info-desc">
+              Connect directly via my official profiles on LinkedIn and GitHub, or reach out via email:
+            </p>
+
+            <div class="contact-links-list">
+              <!-- Verified LinkedIn -->
+              <a href="https://www.linkedin.com/in/j-sharadvardhan-acharya-83638b3b5/" target="_blank" rel="noopener noreferrer" class="contact-link-item highlight-link" id="link-linkedin">
+                <div class="channel-icon-bubble linkedin-bubble">
+                  <svg viewBox="0 0 24 24" class="channel-svg" aria-hidden="true">
+                    <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.67-.75 1.67-1.67A1.67 1.67 0 0 0 6.46 5.42a1.67 1.67 0 0 0-1.67 1.67c0 .92.75 1.67 1.67 1.67m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                  </svg>
+                </div>
+                <div class="channel-text-meta">
+                  <span class="channel-label">LinkedIn</span>
+                  <span class="channel-val">j-sharadvardhan-acharya-83638b3b5</span>
+                </div>
+                <span class="external-indicator">&nearr;</span>
+              </a>
+
+              <!-- Verified GitHub -->
+              <a href="https://github.com/acharyaasharad" target="_blank" rel="noopener noreferrer" class="contact-link-item highlight-link" id="link-github">
+                <div class="channel-icon-bubble github-bubble">
+                  <svg viewBox="0 0 24 24" class="channel-svg" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                  </svg>
+                </div>
+                <div class="channel-text-meta">
+                  <span class="channel-label">GitHub</span>
+                  <span class="channel-val">github.com/acharyaasharad</span>
+                </div>
+                <span class="external-indicator">&nearr;</span>
+              </a>
+
+              <!-- Direct Email -->
+              <a href="mailto:sharad.acharya@example.com" class="contact-link-item" id="link-email">
+                <div class="channel-icon-bubble">
+                  <svg viewBox="0 0 24 24" class="channel-svg" aria-hidden="true">
+                    <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div class="channel-text-meta">
+                  <span class="channel-label">Direct Email</span>
+                  <span class="channel-val">sharad.acharya@example.com</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="contact-link-item" style="cursor: default;">
+                <div class="channel-icon-bubble">
+                  <svg viewBox="0 0 24 24" class="channel-svg" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                  </svg>
+                </div>
+                <div class="channel-text-meta">
+                  <span class="channel-label">Academic Location</span>
+                  <span class="channel-val">Nagpur, Maharashtra, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="brand-icon">JA</span>
+        <div>
+          <span class="footer-title">J Sharadvardhan Acharya</span>
+          <p class="footer-sub">CSE Undergraduate &bull; Symbiosis Institute of Technology, Nagpur</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/acharyaasharad" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/j-sharadvardhan-acharya-83638b3b5/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-text">
+          &copy; 2026 J Sharadvardhan Acharya. Designed in Light Blue &amp; White.
+        </div>
+        <button type="button" class="back-to-top-btn" id="back-to-top-btn">
+          <span>Back to Top</span>
+          <span>&uarr;</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "title": "FarmDirect",
+    "category": "Web Development",
+    "description": "FarmDirect is a farmer-to-consumer grocery platform concept designed to connect customers with farmers selling vegetables, fruits, and dairy products.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Firebase Authentication",
+      "Firestore"
+    ],
+    "features": [
+      "Farmer dashboard concept for item catalog management",
+      "Adding, editing, and deleting available produce items",
+      "Product listing, search, and inventory management",
+      "REST API operations for grocery catalog CRUD actions"
+    ],
+    "status": "Concept / Development",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  },
+  {
+    "id": 2,
+    "title": "AI-Based Crop Recommendation System",
+    "category": "Machine Learning",
+    "description": "An agricultural machine learning project designed to recommend suitable crops based on relevant soil and environmental parameters.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Random Forest"
+    ],
+    "features": [
+      "Dataset preparation and exploratory data analysis",
+      "Input feature preprocessing (NPK values, temperature, humidity, pH, rainfall)",
+      "Model training and prediction using classification algorithms",
+      "Crop recommendation based on model evaluation outputs"
+    ],
+    "status": "Academic Project",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  },
+  {
+    "id": 3,
+    "title": "SIT Nagpur FAQ Chatbot",
+    "category": "Python and AI",
+    "description": "A college FAQ chatbot concept that helps students find answers to common questions about admissions, courses, fees, examinations, placements, and contact information.",
+    "technologies": [
+      "Python",
+      "TF-IDF",
+      "JSON",
+      "Basic text processing"
+    ],
+    "features": [
+      "FAQ knowledge base stored and queried from JSON files",
+      "Matching student questions with relevant answers using text similarity",
+      "Basic text retrieval and cosine similarity using TF-IDF",
+      "Quick-action categories for frequently asked campus queries"
+    ],
+    "status": "Prototype",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  },
+  {
+    "id": 4,
+    "title": "Weather Risk Alert System",
+    "category": "Python and AI",
+    "description": "A weather risk analysis application concept that combines weather information with a risk-assessment workflow to help users understand possible weather-related hazards.",
+    "technologies": [
+      "Python",
+      "Gradio",
+      "APIs",
+      "Environment variables",
+      "AI integration"
+    ],
+    "features": [
+      "Real-time weather data retrieval via REST APIs",
+      "Risk assessment workflow evaluating severity thresholds",
+      "AI-assisted summary explanation of weather hazards",
+      "Clean interactive web-based interface built with Gradio"
+    ],
+    "status": "Prototype Concept",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  },
+  {
+    "id": 5,
+    "title": "Energy Demand Forecasting and Optimization",
+    "category": "Machine Learning",
+    "description": "A learning project focused on forecasting energy demand using historical data and exploring how demand predictions can support better energy planning.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Scikit-learn"
+    ],
+    "features": [
+      "Historical energy demand data analysis and trend visualization",
+      "Forecasting models trained on time-series load records",
+      "Exploration of optimization models to improve energy allocation (Planned)"
+    ],
+    "status": "Learning Project (Planned Optimization)",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  },
+  {
+    "id": 6,
+    "title": "Football Tactics Simulation Web App",
+    "category": "Simulation",
+    "description": "A football tactics simulation concept that explores how formations, player roles, and tactical instructions can influence simulated match outcomes.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Simulation logic"
+    ],
+    "features": [
+      "Interactive team formation selection and preset tactical shapes",
+      "Tactical positioning, passing styles, and player role setups",
+      "Turn-by-turn simulation engine calculating match events",
+      "Post-match analytical breakdown and tactical statistics (Planned)"
+    ],
+    "status": "Concept Simulation",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  },
+  {
+    "id": 7,
+    "title": "Contract Management Prototype",
+    "category": "Web Development",
+    "description": "A contract management prototype focused on organizing contract records and helping users find contracts by identifiers, company or vendor names, and contract types.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "features": [
+      "Instant contract search and identifier filtering",
+      "Status tracking (Active, Pending, Expired) with expiry date monitors",
+      "Create, edit, and delete operations for contract metadata records"
+    ],
+    "status": "Prototype",
+    "github": "https://github.com/acharyaasharad",
+    "demo": ""
+  }
+]
